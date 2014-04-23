@@ -1,15 +1,15 @@
-¹Ø±Õ×Ô¶¯ĞŞ¶©¹¦ÄÜºÍ×Ô¶¯±£´æ¹¦ÄÜ
-¸ùÄ¿Â¼ÏÂÕÒµ½wp-config.php
-ÔÚdefine('WP_DEBUG', false);ºóÃæÌî¼Ó
-define('WP_POST_REVISIONS', false); //¹Ø±Õ×Ô¶¯ĞŞ¶©¹¦ÄÜ
-define('AUTOSAVE_INTERVAL', 86400); //ÉèÖÃ×Ô¶¯±£´æÊ±¼äÎªÒ»Ìì£¬´ïµ½±äÏà¹Ø±Õ×Ô¶¯±£´æµÄÄ¿µÄ¡£
+ï»¿å…³é—­è‡ªåŠ¨ä¿®è®¢åŠŸèƒ½å’Œè‡ªåŠ¨ä¿å­˜åŠŸèƒ½
+æ ¹ç›®å½•ä¸‹æ‰¾åˆ°wp-config.php
+åœ¨define('WP_DEBUG', false);åé¢å¡«åŠ 
+define('WP_POST_REVISIONS', false); //å…³é—­è‡ªåŠ¨ä¿®è®¢åŠŸèƒ½
+define('AUTOSAVE_INTERVAL', 86400); //è®¾ç½®è‡ªåŠ¨ä¿å­˜æ—¶é—´ä¸ºä¸€å¤©ï¼Œè¾¾åˆ°å˜ç›¸å…³é—­è‡ªåŠ¨ä¿å­˜çš„ç›®çš„ã€‚
 
 
-/wp-admin/index.php  - È¥³ı ´ò¿ª ´ËÒ³ÃæĞÂÔöÒ»Ìõ ²İ¸åµÄµÄ´úÂë¸ÉÈÅÊôÓÚBUG
+/wp-admin/index.php  - å»é™¤ æ‰“å¼€ æ­¤é¡µé¢æ–°å¢ä¸€æ¡ è‰ç¨¿çš„çš„ä»£ç å¹²æ‰°å±äºBUG
 
 
 
-/wp-admin/includes/post.php ÆÁ±Î×Ô¶¯É¾³ı auto-draft
+/wp-admin/includes/post.php å±è”½è‡ªåŠ¨åˆ é™¤ auto-draft
 
 "if ( $create_in_db ) {
   // Cleanup old auto-drafts more than 7 days old
@@ -20,6 +20,6 @@ define('AUTOSAVE_INTERVAL', 86400); //ÉèÖÃ×Ô¶¯±£´æÊ±¼äÎªÒ»Ìì£¬´ïµ½±äÏà¹Ø±Õ×Ô¶¯±£
 
 
 
-/wp-admin/includes/post.php    auto-draft ¸ÄÎª draft (°Ñ×Ô¶¯²İ¸å£¬±äÎª²İ¸å¡£·½±ãIDÑÓĞø)
+/wp-admin/includes/post.php    auto-draft æ”¹ä¸º draft (æŠŠè‡ªåŠ¨è‰ç¨¿ï¼Œå˜ä¸ºè‰ç¨¿ã€‚æ–¹ä¾¿IDå»¶ç»­)
 
   $post_id = wp_insert_post( array( 'post_title' => __( 'Auto Draft' ), 'post_type' => $post_type, 'post_status' => 'auto-draft' ) );
